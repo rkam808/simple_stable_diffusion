@@ -1,3 +1,14 @@
-<div class="container">
+<!-- {% extends "./base_template.html" %}
 
+{% block content %} -->
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<div class="d-flex justify-content-center">
+    <h1>Simple Stable Diffusion</h1>
+
+    <form action="{% url 'generate' %}">
+        <input type="text", name="prompt">Prompt
+    </form>
 </div>
+<!-- {% endblock %} -->
