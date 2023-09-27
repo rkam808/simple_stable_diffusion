@@ -4,11 +4,14 @@
 {% load bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center flex-column align-items-center">
     <h1>Simple Stable Diffusion</h1>
 
     <form action="{% url 'generate' %}">
-        <input type="text", name="prompt">Prompt
+        <p>Insert your prompt:</p>
+        <input type="text", name="prompt">
+        <!-- <input type="text", name="key"> -->
+        <input type="submit">
     </form>
 </div>
 <!-- {% endblock %} -->

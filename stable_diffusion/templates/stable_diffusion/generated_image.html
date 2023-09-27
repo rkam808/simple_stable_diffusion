@@ -1,0 +1,11 @@
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<div class="d-flex justify-content-center flex-column align-items-center">
+    <h1>Your Generated Image:</h1>
+    <img src="{{ image_url }}" alt="generated_image">
+
+    <button>
+        <a href="{% url 'home' %}">Home</a>
+    </button>
+</div>
