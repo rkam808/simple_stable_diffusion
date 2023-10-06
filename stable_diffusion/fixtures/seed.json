@@ -20,8 +20,10 @@
         "pk": 1,
         "fields": {
             "name": "anime_cat",
-            "image_path": "anime_cat.png",
-            "prompts": [1, 2]
+            "image_path": "stable_diffusion/images/anime_cat.png",
+            "prompts": [1, 2],
+            "style_prompt": "generate a collage-style illustration inspired by the Procreate raster graphic editor, photographic illustration with the theme, 2D vector, art for textile sublimation, inspired by Sadao Watanabe Doraemon Japanese cartoon style, Iconic high detail character, Director: Nakahara Nantenbō , image detailed by Miyamoto Hidetaka Miyazaki, Katsuhiro illustration, 8k, masterpiece, Minimize noise and grain in photo quality without lose quality and increase brightness and lighting,Symmetry and Alignment, Avoid asymmetrical shapes and out-of-focus points. Focus and Sharpness: Make sure the image is focused and sharp and encourages the viewer to see it as a work of art printed on fabric.",
+            "character_prompt": "containing surrealistic cartoon cat wearing a baseball cap and jeans standing in front of a poster,"
         }
     },
     {
@@ -53,8 +55,11 @@
         "pk": 2,
         "fields": {
             "name": "disney_girl",
-            "image_path": "disney_girl.png",
-            "prompts": [3, 4, 5]
+            "image_path": "stable_diffusion/images/disney_girl.png",
+            "prompts": [3, 4, 5],
+            "style_prompt": "illustration, realistic shaded perfect face, fine details, realistic shaded lighting by ilya kuvshinov giuseppe dangelico pino and michael garmash and rob rey, iamag premiere, wlop matte print, 4k resolution, a masterpiece,",
+            "character_prompt": "young Disney socialite wearing a beige miniskirt, dark brown turtleneck sweater, small neckless, cute-fine-face, anime. brown hair, grey eyes,",
+            "negative_prompt": "ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs..."
         }
     },
     {
@@ -86,8 +91,11 @@
         "pk": 3,
         "fields": {
             "name": "shinkai_anime_girl",
-            "image_path": "shinkai_anime_girl.png",
-            "prompts": [6, 7, 8]
+            "image_path": "stable_diffusion/images/shinkai_anime_girl.png",
+            "prompts": [6, 7, 8],
+            "style_prompt": "with background by greg rutkowski makoto shinkai kyoto animation key art feminine mid shot",
+            "character_prompt": "cute girl, crop-top, blond hair, black glasses, stretching",
+            "negative_prompt": "Deformed, blurry, bad anatomy, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, poorly drawn hands, missing limb, blurry, floating limbs, disconnected limbs, malformed hands, blur, out of focus, long neck, long body, ((((mutated hands and fingers)))), (((out of frame)))"
         }
     },
     {
@@ -119,8 +127,11 @@
         "pk": 4,
         "fields": {
             "name": "kinkade_rutkowski_fuji_landscape",
-            "image_path": "kinkade_rutkowki_fuji_landscape.png",
-            "prompts": [6, 7, 8]
+            "image_path": "stable_diffusion/images/kinkade_rutkowki_fuji_landscape.png",
+            "prompts": [6, 7, 8],
+            "style_prompt": "best high quality landscape, in the morning light, by greg rutkowski and thomas kinkade,Trending on artstationmakoto shinkai style",
+            "character_prompt": "Overlooking TOKYO beautiful city with Fujiyama from a tall house",
+            "negative_prompt": "people, person, character"
         }
     }
 ]
