@@ -133,5 +133,41 @@
             "character_prompt": "Overlooking TOKYO beautiful city with Fujiyama from a tall house",
             "negative_prompt": "people, person, character"
         }
+    },
+    {
+        "model": "stable_diffusion.example",
+        "pk": 5,
+        "fields": {
+            "name": "tiny_cute_isometric_living_room",
+            "image_path": "stable_diffusion/images/tiny_cute_isometric_living_room.png",
+            "prompts": [],
+            "style_prompt": "soft smooth lighting, soft colors, yellow and blue color scheme, soft colors, 20mm lens, 3d blender render",
+            "character_prompt": "Tiny cute isometric living room in a cutaway box,",
+            "negative_prompt": ""
+        }
+    },
+    {
+        "model": "stable_diffusion.example",
+        "pk": 6,
+        "fields": {
+            "name": "futuristic_tree_house",
+            "image_path": "stable_diffusion/images/futuristic_tree_house.png",
+            "prompts": [],
+            "style_prompt": "hyper realistic, epic composition, cinematic, landscape vista photography by Carr Clifton & Galen Rowell, Landscape veduta photo by Dustin Lefevre & tdraw, detailed landscape painting by Ivan Shishkin, rendered in Enscape, Miyazaki, Nausicaa Ghibli, 4k detailed post processing, unreal engine",
+            "character_prompt": "futuristic tree house",
+            "negative_prompt": ""
+        }
+    },
+    {
+        "model": "stable_diffusion.example",
+        "pk": 7,
+        "fields": {
+            "name": "fantasy_gardens",
+            "image_path": "stable_diffusion/images/fantasy_gardens.png",
+            "prompts": [],
+            "style_prompt": "intricate elegant highly detailed lifelike photorealistic realistic painting, long shot, studio lighting, octane render, by Dorian Cleavenger",
+            "character_prompt": "Ethereal gardens of marble built in a shining teal river in future city, gorgeous ornate multi-tiered fountain, futuristic,",
+            "negative_prompt": "(disfigured), black and white, bad anatomy, bad hands"
+        }
     }
 ]
