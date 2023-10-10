@@ -88,7 +88,7 @@
     },
     {
         "model": "stable_diffusion.example",
-        "pk": 3,
+        "pk": 9,
         "fields": {
             "name": "shinkai_anime_girl",
             "image_path": "stable_diffusion/images/shinkai_anime_girl.png",
@@ -124,7 +124,7 @@
     },
     {
         "model": "stable_diffusion.example",
-        "pk": 4,
+        "pk": 3,
         "fields": {
             "name": "kinkade_rutkowski_fuji_landscape",
             "image_path": "stable_diffusion/images/kinkade_rutkowki_fuji_landscape.png",
@@ -168,6 +168,31 @@
             "style_prompt": "intricate elegant highly detailed lifelike photorealistic realistic painting, long shot, studio lighting, octane render, by Dorian Cleavenger",
             "character_prompt": "Ethereal gardens of marble built in a shining teal river in future city, gorgeous ornate multi-tiered fountain, futuristic,",
             "negative_prompt": "(disfigured), black and white, bad anatomy, bad hands"
+        }
+    },
+
+    {
+        "model": "stable_diffusion.example",
+        "pk": 8,
+        "fields": {
+            "name": "photoreal_interior_design",
+            "image_path": "stable_diffusion/images/photoreal_interior_design.png",
+            "prompts": [],
+            "style_prompt": "rendered in vray, rendered in octane, rendered in unreal engine, architectural photography, photorealism, featured in dezeen, cristobal palma::2.5 chaparral landscape outside, black surfaces/textures for furnishings in outdoor space::1 –q 2 –ar 4:7",
+            "character_prompt": "Residential home high end futuristic interior, olson kundig::1 Interior Design by Dorothy Draper, maison de verre, axel vervoordt::2 award winning photography of an indoor-outdoor living library space, minimalist modern designs::1 high end indoor/outdoor residential living space",
+            "negative_prompt": ""
+        }
+    },
+    {
+        "model": "stable_diffusion.example",
+        "pk": 4,
+        "fields": {
+            "name": "cyberpunk_robot",
+            "image_path": "stable_diffusion/images/cyberpunk_robot.png",
+            "prompts": [],
+            "style_prompt": "matt dixon surrealista triste Character Concept, Concept Art, Character Design, 3d Character, Arte Cyberpunk, Arte Robot, Steampunk, Sci Fi Art, Whimsical Art",
+            "character_prompt": "We can use technology to help people like Kevin. ‘ thomaswievegg by Pinturas-de-robots-solitarios-contemplando-el-mundo (1)",
+            "negative_prompt": "people, person"
         }
     }
 ]
