@@ -4,14 +4,65 @@
 {% load bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
-<div class="d-flex justify-content-center flex-column align-items-center">
+{% load static%}
+<link rel="stylesheet" href="{% static 'stable_diffusion/styles/home.css' %}">
+
+<div class="flexbox-column" style="height:100vh; width:100vw;">
     <h1>Simple Stable Diffusion</h1>
 
-    <form action="{% url 'generate' %}">
-        <p>Insert your prompt:</p>
-        <input type="text", name="prompt">
-        <!-- <input type="text", name="key"> -->
-        <input type="submit">
-    </form>
+    <div class="main_content_container">
+        <div class="main-form-container">
+            <h2>Generate Image</h2>
+            <form action="{% url 'generate' %}">
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <label for="prompt">Style:</label>
+                    <textarea rows="4" cols="50" name="style" id="style_prompt" class="text_input"></textarea>
+                    <label for="prompt">Subject:</label>
+                    <textarea rows="4" cols="50" name="subject" id="subject_prompt" class="text_input"></textarea>
+                    <label for="negative_prompt">Negative Prompt:</label>
+                    <textarea rows="4" cols="50" name="negative_prompt" id="negative_prompt" class="text_input"></textarea>
+                    <!-- <input type="text", name="key"> -->
+                    <br>
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+        
+        <div class="flexbox-column">
+            <h2>Examples</h2>
+            <div class="examples">
+                {% for example in examples %}
+                    <div class="image-container">
+                        <img class="ex_image" src="{% static example.image_path %}" alt="example_img">
+                        <div class="hide prompt-buttons flexbox">
+                            <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.style_prompt }}', 'style');">
+                                Add this Style
+                            </a>
+                            <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.character_prompt }}', 'character');">
+                                Add this Character
+                            </a>
+                            <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.negative_prompt }}', 'negative');">
+                                Add this Negative Prompt
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    function autoFillStyle(e, prompt, type) {
+        // console.log(prompt);
+        e.preventDefault();
+        if (type == 'style') {
+            document.getElementById('style_prompt').value = prompt;
+        } else if (type == 'character') {
+            document.getElementById('subject_prompt').value = prompt;
+        } else {
+            document.getElementById('negative_prompt').value = prompt;
+        }
+    }
+</script>
 <!-- {% endblock %} -->
