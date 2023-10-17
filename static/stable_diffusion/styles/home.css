@@ -1,5 +1,17 @@
+body {
+    background-color: F1EFEF;
+}
+
 h1 {
-    margin-bottom: 10vh;
+    margin: 2vh;
+}
+
+form p {
+    font-size: 14px;
+}
+
+label {
+    font-weight: 600;
 }
 
 .main_content_container {
@@ -16,6 +28,12 @@ h1 {
     align-items: center;
     justify-content: center;
     margin-right: 5vw;
+    max-width: 25vw;
+}
+
+.form-field {
+    margin-bottom: 2vh;
+    width: 25vw;
 }
 
 .examples {

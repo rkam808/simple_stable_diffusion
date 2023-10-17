@@ -7,50 +7,57 @@
 {% load static%}
 <link rel="stylesheet" href="{% static 'stable_diffusion/styles/home.css' %}">
 
-<div class="flexbox-column" style="height:100vh; width:100vw;">
-    <h1>Simple Stable Diffusion</h1>
+<body>
+    <div class="flexbox-column main-container">
+        <h1>Simple Stable Diffusion</h1>
 
-    <div class="main_content_container">
-        <div class="main-form-container">
-            <h2>Generate Image</h2>
-            <form action="{% url 'generate' %}">
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <label for="prompt">Style:</label>
-                    <textarea rows="4" cols="50" name="style" id="style_prompt" class="text_input"></textarea>
-                    <label for="prompt">Subject:</label>
-                    <textarea rows="4" cols="50" name="subject" id="subject_prompt" class="text_input"></textarea>
-                    <label for="negative_prompt">Negative Prompt:</label>
-                    <textarea rows="4" cols="50" name="negative_prompt" id="negative_prompt" class="text_input"></textarea>
-                    <!-- <input type="text", name="key"> -->
-                    <br>
-                    <input type="submit" class="btn btn-primary">
-                </div>
-            </form>
-        </div>
-        
-        <div class="flexbox-column">
-            <h2>Examples</h2>
-            <div class="examples">
-                {% for example in examples %}
-                    <div class="image-container">
-                        <img class="ex_image" src="{% static example.image_path %}" alt="example_img">
-                        <div class="hide prompt-buttons flexbox">
-                            <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.style_prompt }}', 'style');">
-                                Add this Style
-                            </a>
-                            <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.character_prompt }}', 'character');">
-                                Add this Character
-                            </a>
-                            <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.negative_prompt }}', 'negative');">
-                                Add this Negative Prompt
-                            </a>
-                        </div>
+        <div class="main_content_container">
+            <div class="main-form-container">
+                <h2>Generate Image</h2>
+                <form action="{% url 'generate' %}">
+                    <div class="flexbox-column">
+                        <label for="prompt">API Key:</label>
+                        <p>(can be found on my resume)</p>
+                        <input type="text" name="key" class="form-field" required>
+                        <label for="prompt">Style:</label>
+                        <p>The artistic style of the image you would like to generate.</p>
+                        <textarea rows="4" cols="50" name="style" id="style_prompt" class="text_input form-field"></textarea>
+                        <label for="prompt">Subject:</label>
+                        <p>Description of a person, character, monument, landmark, etc. you would like to be the main subject of your image.</p>
+                        <textarea rows="4" cols="50" name="subject" id="subject_prompt" class="text_input form-field"></textarea>
+                        <label for="negative_prompt">Negative Prompt:</label>
+                        <p>Anything you would prefer Stable Diffusion not to include in the final image.</p>
+                        <textarea rows="4" cols="50" name="negative_prompt" id="negative_prompt" class="text_input form-field"></textarea>
+                        <br>
+                        <input type="submit" class="btn btn-primary">
                     </div>
-                {% endfor %}
+                </form>
+            </div>
+            
+            <div class="flexbox-column">
+                <h2>Examples</h2>
+                <div class="examples">
+                    {% for example in examples %}
+                        <div class="image-container">
+                            <img class="ex_image" src="{% static example.image_path %}" alt="example_img">
+                            <div class="hide prompt-buttons flexbox">
+                                <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.style_prompt }}', 'style');">
+                                    Apply this Style
+                                </a>
+                                <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.character_prompt }}', 'character');">
+                                    Apply this Subject
+                                </a>
+                                <a class="btn btn-info" href="#" onClick="autoFillStyle(event, '{{ example.negative_prompt }}', 'negative');">
+                                    Apply this Negative Prompt
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </div> 
+</body>
 
 <script>
     function autoFillStyle(e, prompt, type) {
